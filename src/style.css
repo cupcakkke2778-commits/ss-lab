@@ -1,0 +1,129 @@
+/* S&S Lab - 全局样式 */
+/* 苹果极简风 · 黑白灰主色调 · 低饱和蓝点缀 */
+
+:root {
+  /* 主色调 */
+  --color-bg: #f5f5f7;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #e8e8ed;
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-text-tertiary: #86868b;
+  --color-border: #d2d2d7;
+  --color-border-light: #e8e8ed;
+
+  /* 点缀色 - 低饱和蓝 */
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+  --color-accent-light: #e3f0ff;
+  --color-accent-bg: rgba(0, 113, 227, 0.04);
+
+  /* 功能色 */
+  --color-success: #30d158;
+  --color-warning: #ff9f0a;
+  --color-error: #ff453a;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* 字体 */
+  --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* 间距 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* 布局 */
+  --sidebar-width: 260px;
+  --ai-chat-width: 380px;
+  --header-height: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}
+
+/* 选中文字样式 */
+::selection {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+/* KaTeX 公式样式 */
+.katex {
+  font-size: 1.05em !important;
+}
+
+.katex-display {
+  margin: var(--space-md) 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--space-sm) 0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px;
+    --ai-chat-width: 100vw;
+  }
+}

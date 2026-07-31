@@ -1,0 +1,10 @@
+[2m07:12:30[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled rejection] [1mTypeError[22m: scrollbarRef.value.$el?.querySelector is not a function
+[39m > scrollToBottom src/components/ai-chat/AiChatPanel.vue:44:46
+    42 |    await nextTick()
+    43 |    if (scrollbarRef.value) {
+    44 |      const container = scrollbarRef.value.$el?.querySelector('.n-scrollbar-content')
+       |                                                ^
+    45 |      if (container?.parentElement) {
+    46 |        container.parentElement.scrollTop = container.parentElement.scrollHeight
+ > sendMessage src/components/ai-chat/AiChatPanel.vue:74:2
+
